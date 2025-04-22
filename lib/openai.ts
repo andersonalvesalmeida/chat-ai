@@ -19,7 +19,7 @@ type ChatMessage = {
 export async function getChatCompletion(messages: ChatMessage[]) {
   try {
     const response = await openai.chat.completions.create({
-      model: "gpt-4.1-mini",
+      model: "gpt-4o",
       messages: messages.map(msg => ({ role: msg.role, content: msg.content })),
     });
     
